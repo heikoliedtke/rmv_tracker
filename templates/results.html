@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<h2> {{ the_title }}</h2>
+
+<table>
+   
+    <tr>
+        <th>Line</th>
+        <th>Direction</th>
+        <th>Platform</th>
+        <th>Planned Departure</th>
+        <th>Actuall Departure</th>
+        <th>Train ID</th>
+        
+    </tr>
+
+
+    {% for log_row in the_result %}
+    <tr>
+        
+        <td>{{log_row["name"]}}</td>
+        <td>{{log_row["direction"]}}</td>
+        <td>{{log_row["track"]}}</td>
+        <td>{{log_row["time"]}}</td>
+        <td>{{log_row["rtTime"]}}</td>
+        <td>{{log_row["trainNumber"]}}</td>
+        
+        
+        
+    </tr>
+    {% endfor %}
+
+
+
+</table>
+
+{% endblock %}

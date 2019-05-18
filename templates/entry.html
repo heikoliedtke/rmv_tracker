@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<h2>{{ the_title }}</h2>
+
+
+<form method='POST' action='/results'>
+<table>
+<p>Select the Station:</p>
+
+<tr><td>Taunusanlage</td><td><input name='station' type='radio' value='3000011'></td></tr>
+<tr><td>Rüsselsheim</td><td><input name='station' type='radio' value='3004912'></td></tr>
+<tr><td>Hauptbahnhof</td><td><input name='station' type='radio' value='3007010'></td></tr>
+
+</table>
+
+<p>Select the lines:</p>
+S8,S9 <input name='lines' type='radio' value='S8,S9'>
+Alle <input name='lines' type='radio' value=''>
+
+<p><input value='OK' type='SUBMIT'></p>
+</form>
+
+{% endblock %}
