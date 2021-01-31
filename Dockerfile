@@ -1,4 +1,4 @@
-FROM ubuntu:18.10
+FROM ubuntu:18.04
 
 RUN apt-get update && apt-get install -y python3 python3-dev python3-pip nginx uwsgi-plugin-python3 && rm /etc/nginx/sites-enabled/default
 
