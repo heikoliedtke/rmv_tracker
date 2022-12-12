@@ -21,7 +21,7 @@ jobs:
         
       - name: docker build rmv_tracker
         run: |
-           docker build ./rmv_tracker -t ghcr.io/heikoliedtke/rmv_tracker/rmv_tracker:latest
+           docker build . -t ghcr.io/heikoliedtke/rmv_tracker/rmv_tracker:latest
                    
       - name: Log in to registry
         # This is where you will update the PAT to GITHUB_TOKEN
